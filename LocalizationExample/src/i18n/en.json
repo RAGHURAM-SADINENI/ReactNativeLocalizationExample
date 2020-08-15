@@ -1,0 +1,15 @@
+{
+    "homeScreen": "Home Screen",
+    "setting": {
+        "settingScreen": "Setting Screen",
+        "language": "Language",
+        "english": "English",
+        "german": "German",
+        "spanish": "Spanish",
+        "russian": "Russian"
+    },
+    "tabs": {
+        "home": "Home",
+        "settings": "Settings"
+    }
+}

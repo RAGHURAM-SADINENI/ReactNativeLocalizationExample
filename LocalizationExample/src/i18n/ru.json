@@ -1,0 +1,15 @@
+{
+    "homeScreen": "Домашний экран",
+    "setting": {
+        "settingScreen": "Экран настроек",
+        "language": "язык",
+        "english": "английский",
+        "german": "Немецкий",
+        "spanish": "испанский",
+        "russian": "русский"
+    },
+    "tabs": {
+        "home": "Домой",
+        "settings": "настройки"
+    }
+}

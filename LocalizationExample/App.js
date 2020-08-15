@@ -9,9 +9,14 @@
 import React from 'react';
 import AppRouting from './src/app/routing/AppRouting';
 
+import store from './src/redux/Store';
+import { Provider } from 'react-redux';
+
 const App = () => {
   return (
-    <AppRouting />
+    <Provider store={store}>
+      <AppRouting />
+    </Provider>
   );
 };
 

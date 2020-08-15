@@ -1,0 +1,15 @@
+{
+    "homeScreen": "Startbildschirm",
+    "setting": {
+        "settingScreen": "Bildschirm einstellen",
+        "language": "Sprache",
+        "english": "Englisch",
+        "german": "Deutsche",
+        "spanish": "Spanisch",
+        "russian": "Russisch"
+    },
+    "tabs": {
+        "home": "Zuhause",
+        "settings": "die Einstellungen"
+    }
+}

@@ -1,10 +1,13 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-const SettingScreen = () => {
+import { connect } from 'react-redux';
+import I18n from '../../i18n';
+
+const HomeScreen = () => {
     return (
         <View style={styles.container}>
-            <Text>Setting Screen</Text>
+            <Text>{I18n.t('homeScreen')}</Text>
         </View>
     );
 }
@@ -18,4 +21,8 @@ const styles = StyleSheet.create({
     }
 })
 
-export default SettingScreen;
+const mapStateToProps = (state) => ({
+    languageDetails: state.language
+})
+
+export default connect(mapStateToProps)(HomeScreen);

@@ -2,12 +2,15 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import HomeScreen from '../tabs/home/HomeScreen';
-import SettingScreen from '../tabs/settings/SettingScreen';
+import HomeScreen from '../tabs/HomeScreen';
+import SettingScreen from '../tabs/SettingScreen';
+
+import { connect } from 'react-redux';
+import I18n from '../../i18n';
 
 const Tab = createBottomTabNavigator();
 
-const AppRouting = () => {
+const AppRouting = (props) => {
     return (
         <NavigationContainer>
             <Tab.Navigator
@@ -19,6 +22,7 @@ const AppRouting = () => {
                     name="Home"
                     component={HomeScreen}
                     options={{
+                        tabBarLabel: I18n.t('tabs.home'),
                         tabBarIcon: ({ color }) => (
                             <Icon name="home" size={28} color={color} />
                         )
@@ -28,6 +32,7 @@ const AppRouting = () => {
                     name="Settings"
                     component={SettingScreen}
                     options={{
+                        tabBarLabel: I18n.t('tabs.settings'),
                         tabBarIcon: ({ color }) => (
                             <Icon name='settings' size={28} color={color} />
                         )
@@ -38,4 +43,8 @@ const AppRouting = () => {
     );
 }
 
-export default AppRouting;
+const mapStateToProps = (state) => ({
+    languageDetails: state.language
+})
+
+export default connect(mapStateToProps)(AppRouting);
